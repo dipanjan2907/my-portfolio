@@ -1,6 +1,7 @@
 # Space-Themed Portfolio
 
 A modern, responsive, and visually striking personal portfolio website with a space/cosmic theme. Built with React, Tailwind CSS, and Framer Motion.
+Deployed at https://dipanjan2907.github.io/my-portfolio/
 
 ## Features
 
