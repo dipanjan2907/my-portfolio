@@ -6,19 +6,27 @@ const Projects = () => {
   const projects = [
     {
       title: 'Notes App',
-      description: 'An app where you can make Notes.',
+      description: 'A modern, responsive notes application',
       tags: ['React', 'Tailwind'],
       image: 'https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       github: 'https://github.com/dipanjan2907/Note_App',
       demo: 'https://dipanjan2907.github.io/Note_App/'
     },
     {
-      title: 'Password Generator',
-      description: 'Real-time messaging application with end-to-end encryption and dark mode.',
+      title: 'Locksmith- Password Generator',
+      description: 'A sleek and powerful password and PIN generator. This version uses cryptographically secure randomness to ensure maximum security.',
       tags: ['HTML','CSS','JS'],
       image: 'https://plus.unsplash.com/premium_photo-1681487746049-c39357159f69?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       github: 'https://github.com/dipanjan2907/locksmith-password-generator',
       demo: 'https://dipanjan2907.github.io/locksmith-password-generator/'
+    },
+    {
+      title: 'Xenvra- Resume Builder',
+      description: 'A web-based, interactive resume builder designed to help users create professional, ATS-friendly resumes effortlessly.',
+      tags: ['React','TypeScript'],
+      image: 'https://www.investopedia.com/thmb/wtzEam1DrS2U3VgqoweCRaXzJ8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/resume.asp-FINAL-7d61bbc8181747698b3cbb0b2ed6833e.png',
+      github: 'https://github.com/dipanjan2907/resume-builder',
+      demo: 'https://dipanjan2907.github.io/resume-builder/'
     }
   ];
 
@@ -52,10 +60,10 @@ const Projects = () => {
                     className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                    <a href={project.github} className="p-2 bg-white/10 rounded-full hover:bg-white/20 text-white transition-colors">
+                    <a target='blank' href={project.github} className="p-2 bg-white/10 rounded-full hover:bg-white/20 text-white transition-colors">
                       <Github size={20} />
                     </a>
-                    <a href={project.demo} className="p-2 bg-white/10 rounded-full hover:bg-white/20 text-white transition-colors">
+                    <a target='blank' href={project.demo} className="p-2 bg-white/10 rounded-full hover:bg-white/20 text-white transition-colors">
                       <ExternalLink size={20} />
                     </a>
                   </div>
