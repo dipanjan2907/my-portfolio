@@ -7,13 +7,13 @@
 }
 
 body {
-  background-color: #0B0D17;
-  color: #F3F4F6;
+  background-color: #0b0d17;
+  color: #f3f4f6;
   overflow-x: hidden;
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-500 via-amber-600 to-teal-500 to-rose-600;
   }
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Code, Globe, Rocket } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Code, Globe, Rocket } from "lucide-react";
 
 const About = () => {
   return (
@@ -14,29 +14,34 @@ const About = () => {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            <span className="border-b-4 border-blue-500 pb-2">About Me</span>
+            <span className="border-b-4 border-b-indigo-600 pb-2">
+              About Me
+            </span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-600 to-amber-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative bg-space-dark p-1 rounded-lg">
-                <img 
-                  src="https://lh3.googleusercontent.com/a/ACg8ocJIqrCBuRuYn50niud7TTD1iks3Snpbp5-b1dyp-IjRjPvUw_hfmQTUxHiGkD0LylGIdE_HS2ZyajbF4KezFpqIWx6bZG1p=s288-c-no" 
-                  alt="Profile" 
-                  className="rounded-lg w-full shadow-2xl grayscale hover:grayscale-0 transition-all duration-500"
+                <img
+                  src="https://lh3.googleusercontent.com/a/ACg8ocIOoAYtqyK8jjKXJrxkoz0ZYm6ZDpPtaQY6AL3nlohQKIjzeV9x=s400-c"
+                  alt="Profile"
+                  className="rounded-lg w-full shadow-2xl grayscale hover:grayscale-0 transition-all duration-400"
                 />
               </div>
             </div>
 
             <div className="space-y-6">
               <p className="text-gray-300 text-lg leading-relaxed">
-                I'm a passionate developer with a love for creating immersive digital experiences. 
-                My journey began with a curiosity for how things work, leading me to explore the vast universe of web development.
+                I'm a passionate developer with a love for creating immersive
+                digital experiences. My journey began with a curiosity for how
+                things work, leading me to explore the vast universe of web
+                development.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed">
-                I specialize in building performant, accessible, and beautiful web applications using modern technologies.
-                When I'm not coding, you can find me exploring new tech, gaming, or stargazing.
+                I specialize in building performant, accessible, and beautiful
+                web applications using modern technologies. When I'm not coding,
+                you can find me exploring new tech, gaming, or stargazing.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
