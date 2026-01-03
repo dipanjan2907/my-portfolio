@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from "react";
 
 const StarBackground = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     let animationFrameId;
 
     const resizeCanvas = () => {
@@ -13,7 +13,7 @@ const StarBackground = () => {
       canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
 
     const stars = [];
@@ -29,10 +29,11 @@ const StarBackground = () => {
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#FFF';
 
-      stars.forEach(star => {
+      stars.forEach((star) => {
         ctx.beginPath();
+        const opacity = Math.random() * 0.5 + 0.5;
+        ctx.fillStyle = `rgba(200, 255, 255, ${opacity})`; // Cyan tinted stars
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
         ctx.fill();
 
@@ -49,7 +50,7 @@ const StarBackground = () => {
     animate();
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener("resize", resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
