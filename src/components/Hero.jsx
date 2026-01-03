@@ -111,7 +111,7 @@ const Hero = () => {
           <div className="w-full aspect-square relative mb-6 rounded-lg overflow-hidden border-2 border-cyber-pink shadow-neon-pink group">
             {/* Place holder for profile image, using a techy looking gradient or actual image */}
             <img
-              src="public/images/profile.jpg"
+              src="images/profile.jpg"
               alt="Profile"
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
             />
