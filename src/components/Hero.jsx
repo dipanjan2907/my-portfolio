@@ -92,11 +92,11 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        <h1 className="text-5xl md:text-7xl font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-white to-cyber-purple drop-shadow-[0_0_10px_rgba(0,243,255,0.5)] mb-4">
+        <h1 className="text-5xl md:text-7xl font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-blue-50 to-cyber-green drop-shadow-[0_0_10px_rgba(0,243,255,0.5)] mb-4">
           DIPANJAN SADHUKHAN
         </h1>
         <p className="text-gray-400 font-mono text-lg tracking-widest uppercase">
-          Full Stack Architect // Creative Dev
+          Full Stack // Developer
         </p>
       </div>
 
@@ -113,7 +113,7 @@ const Hero = () => {
             <img
               src="images/profile.jpg"
               alt="Profile"
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-transparent opacity-60"></div>
             <div className="absolute bottom-2 left-2 text-cyber-pink font-mono text-xs">
