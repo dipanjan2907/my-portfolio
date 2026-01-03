@@ -1,7 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Cpu, Activity, Server, Radio, Shield, Zap } from "lucide-react";
-
+import {
+  Cpu,
+  Activity,
+  Server,
+  Radio,
+  Shield,
+  Zap,
+  MapPin,
+} from "lucide-react";
+import ReactCountryFlag from "react-country-flag";
 // Mock Data for Charts
 const StatBar = ({ label, value, color }) => (
   <div className="mb-4">
@@ -110,6 +118,19 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-transparent opacity-60"></div>
             <div className="absolute bottom-2 left-2 text-cyber-pink font-mono text-xs">
               ID: DEEP_07
+            </div>
+            <div className="absolute bottom-2 right-2 flex items-center gap-1.5 text-cyber-pink text-xs">
+              <MapPin size={14} />
+              <span className="font-mono">BHARAT</span>
+              <ReactCountryFlag
+                countryCode="IN"
+                svg
+                style={{
+                  width: "1.5em",
+                  height: "1.4em",
+                }}
+                title="India"
+              />
             </div>
           </div>
 
