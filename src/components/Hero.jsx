@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
+  Brain,
   Cpu,
   Activity,
   Server,
@@ -8,6 +9,9 @@ import {
   Shield,
   Zap,
   MapPin,
+  Linkedin,
+  Github,
+  Instagram,
 } from "lucide-react";
 import ReactCountryFlag from "react-country-flag";
 // Mock Data for Charts
@@ -98,6 +102,34 @@ const Hero = () => {
         <p className="text-gray-400 font-mono text-lg tracking-widest uppercase">
           Full Stack // Developer
         </p>
+
+        {/* Social Links */}
+        <div className="flex justify-center gap-6 mt-6">
+          <a
+            href="https://www.linkedin.com/in/dipanjan2907/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-cyber-blue transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(0,243,255,0.5)]"
+          >
+            <Linkedin size={28} />
+          </a>
+          <a
+            href="https://github.com/dipanjan2907"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-cyber-purple transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(147,51,234,0.5)]"
+          >
+            <Github size={28} />
+          </a>
+          <a
+            href="https://www.instagram.com/dipanjan_2907/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-cyber-pink transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]"
+          >
+            <Instagram size={28} />
+          </a>
+        </div>
       </div>
 
       {/* RIGHT PANEL: PROFILE & ACTION */}
@@ -138,7 +170,7 @@ const Hero = () => {
             <div className="flex items-center gap-3 p-3 bg-cyber-dark/50 border border-cyber-pink/30 rounded">
               <Shield size={18} className="text-cyber-pink" />
               <div className="text-xs font-mono text-gray-300">
-                SECURITY: <span className="text-cyber-green">MAXIMUM</span>
+                SYSTEM: <span className="text-cyber-green">ONLINE</span>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 bg-cyber-dark/50 border border-cyber-blue/30 rounded">
@@ -147,10 +179,19 @@ const Hero = () => {
                 LINK: <span className="text-white">ESTABLISHED</span>
               </div>
             </div>
+            <div className="flex items-center gap-3 p-3 bg-cyber-dark/50 border border-cyber-green/30 rounded">
+              <Cpu size={18} className="text-cyber-green" />
+              <div className="text-xs font-mono text-gray-300">
+                CORE: <span className="text-cyber-green">STABLE</span>
+              </div>
+            </div>
 
-            <button className="w-full py-3 mt-2 bg-cyber-pink/10 border border-cyber-pink text-cyber-pink font-orbitron text-sm tracking-wider hover:bg-cyber-pink hover:text-black transition-all shadow-neon-pink">
-              INITIATE_CONTACT
-            </button>
+            <div className="flex items-center gap-3 p-3 bg-cyber-dark/50 border border-cyber-purple/30 rounded">
+              <Brain size={18} className="text-cyber-purple" />
+              <div className="text-xs font-mono text-gray-300">
+                LEARNING: <span className="text-cyber-purple">ENABLED</span>
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>

@@ -27,7 +27,7 @@ const Projects = () => {
       description: "Real-time campus platform.",
       tags: ["Next.js", "Firebase"],
       github: "https://github.com/dipanjan2907/camp-link",
-      demo: "",
+      demo: "https://dipanjan2907.github.io/camp-link/",
       status: "BETA",
       color: "text-cyber-purple",
     },
