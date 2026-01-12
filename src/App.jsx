@@ -19,10 +19,10 @@ function App() {
         <div className="px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
             <Projects />
-            <Skills />
           </div>
           <div className="lg:col-span-1 space-y-8">
             <About />
+            <Skills />
             <Contact />
           </div>
         </div>

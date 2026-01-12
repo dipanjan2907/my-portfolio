@@ -96,11 +96,14 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        <h1 className="text-5xl md:text-7xl font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-blue-50 to-cyber-green drop-shadow-[0_0_10px_rgba(0,243,255,0.5)] mb-4">
+        <h1 className="text-5xl md:text-7xl font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-blue-200 to-cyber-green drop-shadow-[0_0_12px_rgba(0,243,255,0.6)] mb-6">
           DIPANJAN SADHUKHAN
         </h1>
-        <p className="text-gray-400 font-mono text-lg tracking-widest uppercase">
-          Full Stack // Developer
+        <p className="text-gray-400 font-mono text-lg tracking-wide uppercase mb-1">
+          B.Tech in Computer Science & Engineering '29
+        </p>
+        <p className="text-gray-400 font-mono text-md tracking-wider">
+          FULL STACK // LOGIC & ALGO
         </p>
 
         {/* Social Links */}
