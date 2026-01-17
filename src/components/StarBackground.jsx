@@ -146,8 +146,9 @@ const StarBackground = () => {
         transition={{ duration: 300, repeat: Infinity, ease: "linear" }}
       >
         <img
-          src="/dipanjan-sadhukhan/images/galaxy1.jpeg"
+          src="./images/galaxy1.jpeg"
           alt="Galaxy"
+          loading="lazy"
           className="w-full h-full object-contain"
         />
       </motion.div>
