@@ -39,7 +39,7 @@ const Skills = () => {
                 transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
                 className="absolute top-0 left-0 h-full bg-cyber-blue shadow-[0_0_10px_#00f3ff]"
               ></motion.div>
-              {/* Grid lines on bar */}
+
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0gMiAwIEwgMiA0IiBzdHJva2U9InJnYmEoMCwgMCwgMCwgMC41KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+')] opacity-30"></div>
             </div>
           </div>

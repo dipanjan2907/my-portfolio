@@ -27,13 +27,11 @@ const Navbar = () => {
       </div>
 
       <div className="md:hidden">
-        {/* Mobile placeholder */}
         <div className="w-8 h-8 border border-cyber-blue flex items-center justify-center">
           <div className="w-6 h-0.5 bg-cyber-blue"></div>
         </div>
       </div>
 
-      {/* Decorative Top Line */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyber-blue/50 to-transparent"></div>
     </nav>
   );

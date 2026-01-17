@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Github, ExternalLink, Folder, Terminal } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const Projects = () => {
-  const projects = [
+const Projects = ({ limit = null }) => {
+  const allProjects = [
     {
       title: "Notes App",
       description: "Modern, responsive notes.",
@@ -40,43 +41,9 @@ const Projects = () => {
       status: "BETA",
       color: "text-cyber-blue",
     },
-    {
-      title: "DSA in C++",
-      description: "Comprehensive DSA implementations.",
-      tags: ["C++"],
-      github: "https://github.com/dipanjan2907/DSA-Cpp",
-      demo: "",
-      status: "BETA",
-      color: "text-cyber-blue",
-    },
-    {
-      title: "Java",
-      description: "Java programs I learnt in classes 9-10.",
-      tags: ["Java"],
-      github: "https://github.com/dipanjan2907/Java-School",
-      demo: "",
-      status: "STABLE",
-      color: "text-cyber-green",
-    },
-    {
-      title: "Python",
-      description: "Python programs I learnt in classes 11-12.",
-      tags: ["Python"],
-      github: "https://github.com/dipanjan2907/Python-School",
-      demo: "",
-      status: "STABLE",
-      color: "text-cyber-green",
-    },
-    {
-      title: "C",
-      description: "C programs I learnt in college.",
-      tags: ["C"],
-      github: "https://github.com/dipanjan2907/C",
-      demo: "",
-      status: "STABLE",
-      color: "text-cyber-green",
-    },
   ];
+
+  const projects = limit ? allProjects.slice(0, limit) : allProjects;
 
   return (
     <motion.div
@@ -155,6 +122,21 @@ const Projects = () => {
           </div>
         ))}
       </div>
+
+      {limit && (
+        <div className="mt-8 text-center">
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-2 px-6 py-2 bg-cyber-blue/10 text-cyber-blue border border-cyber-blue/50 hover:bg-cyber-blue/20 hover:border-cyber-blue transition-all duration-300 rounded font-mono text-sm group"
+          >
+            VIEW_ALL_PROJECTS
+            <ExternalLink
+              size={14}
+              className="group-hover:translate-x-1 transition-transform"
+            />
+          </Link>
+        </div>
+      )}
     </motion.div>
   );
 };

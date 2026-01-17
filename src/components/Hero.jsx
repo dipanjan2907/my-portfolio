@@ -12,9 +12,10 @@ import {
   Linkedin,
   Github,
   Instagram,
+  Mail,
 } from "lucide-react";
 import ReactCountryFlag from "react-country-flag";
-// Mock Data for Charts
+
 const StatBar = ({ label, value, color }) => (
   <div className="mb-4">
     <div className="flex justify-between text-xs font-mono text-gray-400 mb-1">
@@ -33,7 +34,6 @@ const StatBar = ({ label, value, color }) => (
 const Hero = () => {
   return (
     <section className="relative w-full p-6 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-      {/* LEFT PANEL: DATA / STATS */}
       <motion.div
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -65,8 +65,6 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
-
-      {/* CENTER PANEL: HOLO LOGO & MAIN INFO */}
       <div className="lg:col-span-6 flex flex-col items-center text-center relative z-10">
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
@@ -74,12 +72,10 @@ const Hero = () => {
           transition={{ duration: 0.7 }}
           className="w-64 h-64 md:w-80 md:h-80 relative flex items-center justify-center mb-8"
         >
-          {/* Spinning Rings */}
           <div className="absolute inset-0 border-2 border-cyber-blue/30 rounded-full animate-[spin_10s_linear_infinite]"></div>
           <div className="absolute inset-4 border border-cyber-purple/30 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
           <div className="absolute inset-0 bg-cyber-blue/5 rounded-full blur-xl"></div>
 
-          {/* Center Hologram Content */}
           <div className="relative z-10 bg-black/50 backdrop-blur-sm border border-cyber-blue/50 p-6 rounded-full w-48 h-48 flex items-center justify-center shadow-neon-blue">
             <div className="text-center">
               <Cpu
@@ -106,7 +102,6 @@ const Hero = () => {
           FULL STACK // LOGIC & ALGO
         </p>
 
-        {/* Social Links */}
         <div className="flex justify-center gap-6 mt-6">
           <a
             href="https://www.linkedin.com/in/dipanjan2907/"
@@ -134,8 +129,6 @@ const Hero = () => {
           </a>
         </div>
       </div>
-
-      {/* RIGHT PANEL: PROFILE & ACTION */}
       <motion.div
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -144,7 +137,6 @@ const Hero = () => {
       >
         <div className="dashboard-card p-1 rounded-xl corner-accent-pink h-full hologram flex flex-col items-center p-6">
           <div className="w-full aspect-square relative mb-6 rounded-lg overflow-hidden border-2 border-cyber-pink shadow-neon-pink group">
-            {/* Place holder for profile image, using a techy looking gradient or actual image */}
             <img
               src="images/profile.jpg"
               alt="Profile"

@@ -13,21 +13,6 @@ body {
   color: #e2e8f0;
   overflow-x: hidden;
   font-family: "Rajdhani", sans-serif;
-
-  /* Circuit Pattern Background */
-  background-image: radial-gradient(
-      circle at 10% 20%,
-      rgba(0, 243, 255, 0.05) 0%,
-      transparent 20%
-    ),
-    radial-gradient(
-      circle at 90% 80%,
-      rgba(188, 19, 254, 0.05) 0%,
-      transparent 20%
-    ),
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 50px 50px, 50px 50px;
 }
 
 @layer utilities {
@@ -45,7 +30,6 @@ body {
     box-shadow: 0 0 20px rgba(0, 243, 255, 0.15);
   }
 
-  /* Corner accents */
   .corner-accent::before {
     content: "";
     @apply absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-cyber-blue;
@@ -69,7 +53,7 @@ body {
   }
 
   .nav-btn span {
-    @apply block skew-x-[10deg]; /* Counter-skew text */
+    @apply block skew-x-[10deg];
   }
 
   .hologram {
@@ -93,7 +77,6 @@ body {
     pointer-events: none;
   }
 
-  /* Custom Scrollbar for HUD feel */
   ::-webkit-scrollbar {
     width: 6px;
   }
