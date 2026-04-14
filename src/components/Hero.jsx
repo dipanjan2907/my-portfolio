@@ -138,9 +138,9 @@ const Hero = () => {
         <div className="dashboard-card p-1 rounded-xl corner-accent-pink h-full hologram flex flex-col items-center p-6">
           <div className="w-full aspect-square relative mb-6 rounded-lg overflow-hidden border-2 border-cyber-pink shadow-neon-pink group">
             <img
-              src="images/profile.jpg"
+              src="images/profile.png"
               alt="Profile"
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+              className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-transparent opacity-60"></div>
             <div className="absolute bottom-2 left-2 text-cyber-pink font-mono text-xs">
