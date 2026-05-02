@@ -1,38 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const links = [
     { name: "Projects", href: "#projects" },
     { name: "About", href: "#about" },
-    { name: "Matrix", href: "#skills" },
-    { name: "Comms", href: "#contact" },
+    { name: "Skills", href: "#skills" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
-    <nav className="w-full flex justify-between items-center py-6 px-10 relative z-50">
-      <div className="flex items-center gap-2">
-        <div className="w-3 h-12 bg-cyber-blue shadow-neon-blue animate-pulse"></div>
-        <h1 className="text-2xl font-orbitron font-bold text-white tracking-widest">
-          DS<span className="text-cyber-pink">.OS</span>
-        </h1>
-      </div>
+    <nav className="fixed top-0 left-0 w-full z-50 py-4 px-6 md:px-10 transition-all duration-300">
+      <div 
+        className={`max-w-5xl mx-auto flex justify-between items-center px-6 py-4 rounded-full transition-all duration-500 ${
+          scrolled 
+            ? "glass-panel bg-white/[0.02]" 
+            : "bg-transparent"
+        }`}
+      >
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-nebula-purple to-nebula-orange flex items-center justify-center">
+            <span className="font-outfit font-bold text-white text-sm">DS</span>
+          </div>
+        </div>
 
-      <div className="hidden md:flex gap-6">
-        {links.map((link) => (
-          <a key={link.name} href={link.href} className="nav-btn group">
-            <span className="group-hover:text-glow">{link.name}</span>
-          </a>
-        ))}
-      </div>
+        <div className="hidden md:flex gap-2">
+          {links.map((link) => (
+            <a key={link.name} href={link.href} className="nav-btn relative group">
+              <span className="relative z-10">{link.name}</span>
+              <span className="absolute inset-0 bg-white/5 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300 ease-out origin-center"></span>
+            </a>
+          ))}
+        </div>
 
-      <div className="md:hidden">
-        <div className="w-8 h-8 border border-cyber-blue flex items-center justify-center">
-          <div className="w-6 h-0.5 bg-cyber-blue"></div>
+        <div className="md:hidden">
+          <button className="w-10 h-10 rounded-full glass-panel flex flex-col items-center justify-center gap-1.5">
+            <div className="w-5 h-0.5 bg-white rounded-full"></div>
+            <div className="w-4 h-0.5 bg-white rounded-full"></div>
+          </button>
         </div>
       </div>
-
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyber-blue/50 to-transparent"></div>
     </nav>
   );
 };

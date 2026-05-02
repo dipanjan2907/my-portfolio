@@ -18,40 +18,38 @@ const Skills = () => {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="dashboard-card p-8 flex flex-col justify-between corner-accent"
+      className="glass-panel p-8 md:p-10 flex flex-col justify-between"
     >
-      <h2 className="text-xl font-orbitron font-bold mb-6 flex items-center gap-2 text-white">
-        <Database className="text-cyber-blue" size={24} />
-        <span className="tracking-widest">SKILL_MATRIX</span>
-      </h2>
+      <div className="mb-6 pb-6 border-b border-white/10">
+        <h2 className="text-sm font-inter text-nebula-purple uppercase tracking-widest mb-2">Expertise</h2>
+        <h3 className="text-3xl font-outfit font-bold text-white">Skills Matrix</h3>
+      </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
         {skills.map((skill, index) => (
           <div key={index} className="space-y-2">
-            <div className="flex justify-between text-xs font-mono tracking-widest text-cyber-blue/80">
-              <span>{skill.name.toUpperCase()}</span>
+            <div className="flex justify-between text-xs font-inter font-medium tracking-wide text-gray-300">
+              <span>{skill.name}</span>
               <span>{skill.level}%</span>
             </div>
-            <div className="h-2 bg-cyber-dark border border-cyber-blue/20 relative overflow-hidden">
+            <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: `${skill.level}%` }}
-                transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
-                className="absolute top-0 left-0 h-full bg-cyber-blue shadow-[0_0_10px_#00f3ff]"
+                transition={{ duration: 1, delay: 0.2 + index * 0.1, ease: "easeOut" }}
+                className="h-full bg-nebula-gradient shadow-neon"
               ></motion.div>
-
-              <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSI0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0gMiAwIEwgMiA0IiBzdHJva2U9InJnYmEoMCwgMCwgMCwgMC41KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+')] opacity-30"></div>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="mt-8 pt-4 border-t border-cyber-blue/10">
+      <div className="mt-8 pt-6 border-t border-white/10">
         <div className="flex gap-2 flex-wrap">
-          {["JavaScript", "GIT", "NEXT", "NODE"].map((tag) => (
+          {["JavaScript", "GIT", "NEXT.JS", "NODE.JS", "AWS", "LINUX"].map((tag) => (
             <span
               key={tag}
-              className="px-2 py-1 bg-cyber-blue/5 border border-cyber-blue/20 text-[10px] font-mono text-cyber-blue tracking-widest hover:bg-cyber-blue/20 transition-colors"
+              className="px-3 py-1 bg-white/5 border border-white/10 text-xs font-inter font-medium text-gray-300 rounded-full hover:bg-white/10 hover:text-white transition-colors"
             >
               {tag}
             </span>

@@ -1,190 +1,111 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  Brain,
-  Cpu,
-  Activity,
-  Server,
-  Radio,
-  Shield,
-  Zap,
-  MapPin,
-  Linkedin,
-  Github,
-  Instagram,
-  Mail,
-} from "lucide-react";
-import ReactCountryFlag from "react-country-flag";
-
-const StatBar = ({ label, value, color }) => (
-  <div className="mb-4">
-    <div className="flex justify-between text-xs font-mono text-gray-400 mb-1">
-      <span>{label}</span>
-      <span>{value}%</span>
-    </div>
-    <div className="w-full h-1 bg-gray-800 rounded-full overflow-hidden">
-      <div
-        style={{ width: `${value}%` }}
-        className={`h-full ${color} shadow-[0_0_10px_currentColor]`}
-      ></div>
-    </div>
-  </div>
-);
+import { Linkedin, Github, Instagram, ArrowRight, MapPin } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative w-full p-6 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-      <motion.div
-        initial={{ x: -50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="lg:col-span-3 h-full flex flex-col gap-6"
-      >
-        <div className="dashboard-card p-6 rounded-xl corner-accent h-full">
-          <h3 className="text-cyber-blue font-orbitron text-sm tracking-widest mb-6 flex items-center gap-2">
-            <Activity size={16} /> SYSTEM DIAGNOSTICS
-          </h3>
-
-          <StatBar label="REACT_CORE" value={92} color="bg-cyber-blue" />
-          <StatBar label="NODE_SERVER" value={85} color="bg-cyber-purple" />
-          <StatBar label="UI_RENDER" value={98} color="bg-cyber-pink" />
-
-          <div className="mt-8 pt-4 border-t border-gray-800">
-            <div className="text-xs font-mono text-gray-500 mb-2">
-              NETWORK TRAFFIC
-            </div>
-            <div className="flex gap-1 h-12 items-end">
-              {[40, 70, 30, 80, 50, 90, 60, 40].map((h, i) => (
-                <div
-                  key={i}
-                  style={{ height: `${h}%` }}
-                  className="flex-1 bg-cyber-blue/20 border-t border-cyber-blue animate-pulse"
-                ></div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </motion.div>
-      <div className="lg:col-span-6 flex flex-col items-center text-center relative z-10">
+    <section className="relative w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[70vh]">
+      <div className="lg:col-span-7 flex flex-col justify-center relative z-10 order-2 lg:order-1">
         <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
-          className="w-64 h-64 md:w-80 md:h-80 relative flex items-center justify-center mb-8"
+          className="mb-6"
         >
-          <div className="absolute inset-0 border-2 border-cyber-blue/30 rounded-full animate-[spin_10s_linear_infinite]"></div>
-          <div className="absolute inset-4 border border-cyber-purple/30 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
-          <div className="absolute inset-0 bg-cyber-blue/5 rounded-full blur-xl"></div>
-
-          <div className="relative z-10 bg-black/50 backdrop-blur-sm border border-cyber-blue/50 p-6 rounded-full w-48 h-48 flex items-center justify-center shadow-neon-blue">
-            <div className="text-center">
-              <Cpu
-                size={48}
-                className="text-cyber-blue mx-auto mb-2 animate-pulse"
-              />
-              <div className="font-orbitron font-bold text-2xl text-white tracking-widest">
-                DS.OS
-              </div>
-              <div className="text-[10px] text-cyber-blue font-mono">
-                ONLINE
-              </div>
-            </div>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel mb-6 border-nebula-pink/30">
+            <span className="w-2 h-2 rounded-full bg-nebula-cyan animate-pulse"></span>
+            <span className="text-xs font-inter text-gray-300 tracking-wide uppercase">
+              Available for new opportunities
+            </span>
           </div>
+
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-outfit font-black leading-tight tracking-tight mb-4 text-white">
+            Creative <br />
+            <span className="text-gradient">Developer.</span>
+          </h1>
+          <p className="text-gray-400 font-inter text-lg md:text-xl max-w-lg leading-relaxed">
+            I craft modern, highly interactive, and performant web experiences.
+            Focused on bridging the gap between design and robust engineering.
+          </p>
         </motion.div>
 
-        <h1 className="text-5xl md:text-7xl font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-blue-200 to-cyber-green drop-shadow-[0_0_12px_rgba(0,243,255,0.6)] mb-6">
-          DIPANJAN SADHUKHAN
-        </h1>
-        <p className="text-gray-400 font-mono text-lg tracking-wide uppercase mb-1">
-          B.Tech in Computer Science & Engineering '29
-        </p>
-        <p className="text-gray-400 font-mono text-md tracking-wider">
-          FULL STACK // LOGIC & ALGO
-        </p>
-
-        <div className="flex justify-center gap-6 mt-6">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="flex flex-wrap items-center gap-6 mt-8"
+        >
           <a
-            href="https://www.linkedin.com/in/dipanjan2907/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-cyber-blue transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(0,243,255,0.5)]"
+            href="#projects"
+            className="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-space-black font-inter font-semibold hover:scale-105 transition-transform duration-300"
           >
-            <Linkedin size={28} />
+            View Work <ArrowRight size={18} />
           </a>
-          <a
-            href="https://github.com/dipanjan2907"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-cyber-purple transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(147,51,234,0.5)]"
-          >
-            <Github size={28} />
-          </a>
-          <a
-            href="https://www.instagram.com/dipanjan_2907/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-cyber-pink transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(236,72,153,0.5)]"
-          >
-            <Instagram size={28} />
-          </a>
-        </div>
-      </div>
-      <motion.div
-        initial={{ x: 50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="lg:col-span-3 h-full flex flex-col gap-6"
-      >
-        <div className="dashboard-card p-1 rounded-xl corner-accent-pink h-full hologram flex flex-col items-center p-6">
-          <div className="w-full aspect-square relative mb-6 rounded-lg overflow-hidden border-2 border-cyber-pink shadow-neon-pink group">
-            <img
-              src="images/profile.png"
-              alt="Profile"
-              className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-transparent opacity-60"></div>
-            <div className="absolute bottom-2 left-2 text-cyber-pink font-mono text-xs">
-              ID: DEEP_07
-            </div>
-            <div className="absolute bottom-2 right-2 flex items-center gap-1.5 text-cyber-pink text-xs">
-              <MapPin size={14} />
-              <span className="font-mono">BHARAT</span>
-              <ReactCountryFlag
-                countryCode="IN"
-                svg
-                style={{
-                  width: "1.5em",
-                  height: "1.4em",
-                }}
-                title="India"
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.linkedin.com/in/dipanjan2907/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-white hover:border-nebula-purple transition-all duration-300 group"
+            >
+              <Linkedin
+                size={20}
+                className="group-hover:scale-110 transition-transform"
               />
-            </div>
+            </a>
+            <a
+              href="https://github.com/dipanjan2907"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-white hover:border-nebula-pink transition-all duration-300 group"
+            >
+              <Github
+                size={20}
+                className="group-hover:scale-110 transition-transform"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/dipanjan_2907/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-gray-400 hover:text-white hover:border-nebula-orange transition-all duration-300 group"
+            >
+              <Instagram
+                size={20}
+                className="group-hover:scale-110 transition-transform"
+              />
+            </a>
           </div>
+        </motion.div>
+      </div>
 
-          <div className="w-full space-y-3">
-            <div className="flex items-center gap-3 p-3 bg-cyber-dark/50 border border-cyber-pink/30 rounded">
-              <Shield size={18} className="text-cyber-pink" />
-              <div className="text-xs font-mono text-gray-300">
-                SYSTEM: <span className="text-cyber-green">ONLINE</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 p-3 bg-cyber-dark/50 border border-cyber-blue/30 rounded">
-              <Radio size={18} className="text-cyber-blue" />
-              <div className="text-xs font-mono text-gray-300">
-                LINK: <span className="text-white">ESTABLISHED</span>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 p-3 bg-cyber-dark/50 border border-cyber-green/30 rounded">
-              <Cpu size={18} className="text-cyber-green" />
-              <div className="text-xs font-mono text-gray-300">
-                CORE: <span className="text-cyber-green">STABLE</span>
-              </div>
-            </div>
+      <motion.div
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+        className="lg:col-span-5 h-full flex justify-center items-center relative order-1 lg:order-2"
+      >
+        <div className="relative w-72 h-72 md:w-96 md:h-96">
+          {/* Decorative glowing rings */}
+          <div className="absolute inset-0 rounded-full border border-white/5 animate-[spin_20s_linear_infinite]"></div>
+          <div className="absolute inset-4 rounded-full border border-nebula-pink/20 animate-[spin_15s_linear_infinite_reverse]"></div>
 
-            <div className="flex items-center gap-3 p-3 bg-cyber-dark/50 border border-cyber-purple/30 rounded">
-              <Brain size={18} className="text-cyber-purple" />
-              <div className="text-xs font-mono text-gray-300">
-                LEARNING: <span className="text-cyber-purple">ENABLED</span>
+          <div className="absolute inset-8 rounded-full glass-panel overflow-hidden p-2 group shadow-neon hover:shadow-[0_0_30px_rgba(233,64,87,0.8)] transition-all duration-500">
+            <div className="w-full h-full rounded-full overflow-hidden bg-space-light relative">
+              <img
+                src="images/profile.png"
+                alt="Profile"
+                className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700 ease-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-space-black/80 via-transparent to-transparent"></div>
+
+              <div className="absolute bottom-6 w-full text-center">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full glass-panel backdrop-blur-md border-white/20">
+                  <MapPin size={12} className="text-nebula-orange" />
+                  <span className="text-[10px] font-inter font-medium text-white tracking-wider">
+                    BHARAT
+                  </span>
+                </div>
               </div>
             </div>
           </div>

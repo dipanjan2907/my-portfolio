@@ -4,46 +4,47 @@ export default {
   theme: {
     extend: {
       colors: {
-        cyber: {
-          black: "#111216",
-          dark: "#1A1B23",
-          gray: "#252630",
-          blue: "#00f3ff",
-          purple: "#bc13fe",
-          pink: "#ff0055",
-          green: "#0aff0a",
+        space: {
+          black: "#030305",
+          dark: "#08080C",
+          light: "#1A1A24",
+        },
+        nebula: {
+          purple: "#8A2387",
+          pink: "#E94057",
+          orange: "#F27121",
+          cyan: "#00E5FF",
         },
       },
       fontFamily: {
-        orbitron: ["Orbitron", "sans-serif"],
-        rajdhani: ["Rajdhani", "sans-serif"],
+        outfit: ["Outfit", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
       boxShadow: {
-        "neon-blue": "0 0 5px #00f3ff, 0 0 20px #00f3ff40",
-        "neon-purple": "0 0 5px #bc13fe, 0 0 20px #bc13fe40",
-        "neon-pink": "0 0 5px #ff0055, 0 0 20px #ff005540",
-        holo: "inset 0 0 20px rgba(0, 243, 255, 0.2), 0 0 15px rgba(0, 243, 255, 0.4)",
+        "glass": "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
+        "glass-sm": "0 4px 16px 0 rgba(0, 0, 0, 0.25)",
+        "neon": "0 0 15px rgba(233, 64, 87, 0.5)",
       },
       backgroundImage: {
-        "grid-pattern":
-          "linear-gradient(to right, rgba(0, 243, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 243, 255, 0.05) 1px, transparent 1px)",
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "nebula-gradient": "linear-gradient(to right, #8A2387, #E94057, #F27121)",
       },
       keyframes: {
         float: {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-20px)" },
+          "50%": { transform: "translateY(-15px)" },
         },
-        glitch: {
-          "2%, 64%": { transform: "translate(2px,0) skew(0deg)" },
-          "4%, 60%": { transform: "translate(-2px,0) skew(0deg)" },
-          "62%": { transform: "translate(0,0) skew(5deg)" },
+        "aurora-shift": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+          "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
         },
       },
       animation: {
-        "spin-slow": "spin 20s linear infinite",
         float: "float 6s ease-in-out infinite",
-        glitch: "glitch 1s linear infinite",
+        "aurora-shift": "aurora-shift 20s ease-in-out infinite",
+        "spin-slow": "spin 15s linear infinite",
       },
     },
   },
