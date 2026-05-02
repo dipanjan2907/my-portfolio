@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="flex items-center justify-center w-full py-6 border-t border-cyber-blue/10 bg-cyber-black/50 backdrop-blur-sm">
-      <p className="text-[10px] text-cyber-blue/40 font-mono tracking-[0.2em] uppercase">
-        SYS.ID: DIPANJAN // DESIGN_YEAR: 2026 // END_OF_LINE
+    <div className="flex items-center justify-center w-full py-8 mt-12 border-t border-white/5 bg-space-black/80 backdrop-blur-md">
+      <p className="text-xs text-gray-500 font-inter font-medium tracking-wide">
+        © {new Date().getFullYear()} Dipanjan Sadhukhan. All rights reserved.
       </p>
     </div>
   );
