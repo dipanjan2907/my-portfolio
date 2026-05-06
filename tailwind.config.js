@@ -40,11 +40,16 @@ export default {
           "33%": { transform: "translate(30px, -50px) scale(1.1)" },
           "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
         },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         float: "float 6s ease-in-out infinite",
         "aurora-shift": "aurora-shift 20s ease-in-out infinite",
         "spin-slow": "spin 15s linear infinite",
+        marquee: "marquee 30s linear infinite",
       },
     },
   },
