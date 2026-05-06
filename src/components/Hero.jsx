@@ -13,7 +13,7 @@ const Hero = () => {
           className="mb-6"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel mb-6 border-nebula-pink/30">
-            <span className="w-2 h-2 rounded-full bg-nebula-cyan animate-pulse"></span>
+            <span className="w-2 h-2 rounded-full bg-nebula-orange animate-pulse"></span>
             <span className="text-xs font-inter text-gray-300 tracking-wide uppercase">
               Available for new opportunities
             </span>
@@ -93,7 +93,7 @@ const Hero = () => {
           <div className="absolute inset-8 rounded-full glass-panel overflow-hidden p-2 group shadow-neon hover:shadow-[0_0_30px_rgba(233,64,87,0.8)] transition-all duration-500">
             <div className="w-full h-full rounded-full overflow-hidden bg-space-light relative">
               <img
-                src="images/profile.png"
+                src="images/profile.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700 ease-out"
               />
@@ -102,9 +102,14 @@ const Hero = () => {
               <div className="absolute bottom-6 w-full text-center">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full glass-panel backdrop-blur-md border-white/20">
                   <MapPin size={12} className="text-nebula-orange" />
-                  <span className="text-[10px] font-inter font-medium text-white tracking-wider">
-                    BHARAT
-                  </span>
+                  <div className="flex flex-col">
+                    <span className="text-[10px] font-inter font-medium text-nebula-orange tracking-wider">
+                      BHARAT
+                    </span>
+                    <span className="text-[10px] font-inter font-medium text-nebula-orange tracking-wider">
+                      भारत
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

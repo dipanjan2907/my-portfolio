@@ -6,6 +6,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import TechStackMarquee from "./components/TechStackMarquee";
 
 // Lazy load the AllProjects component
 const AllProjects = lazy(() => import("./components/AllProjects"));
@@ -15,7 +16,11 @@ const Home = () => (
     <Navbar />
 
     <main className="max-w-[1600px] mx-auto pb-20 pt-10 space-y-24 px-6 md:px-10">
-      <Hero />
+      <div className="space-y-0">
+        <Hero />
+        <TechStackMarquee />
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 space-y-8">
           <Projects limit={6} />
