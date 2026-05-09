@@ -93,7 +93,7 @@ const Hero = () => {
           <div className="absolute inset-8 rounded-full glass-panel overflow-hidden p-2 group shadow-neon hover:shadow-[0_0_30px_rgba(233,64,87,0.8)] transition-all duration-500">
             <div className="w-full h-full rounded-full overflow-hidden bg-space-light relative">
               <img
-                src="images/profile.jpg"
+                src="images/profile.png"
                 alt="Profile"
                 className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700 ease-out"
               />
