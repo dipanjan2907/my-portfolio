@@ -11,12 +11,18 @@ const AllProjects = () => {
 
   const allProjects = [
     {
+      title: "Arcade Vault",
+      description: "Collection of mini games",
+      tags: ["ReactJS", "Tailwind CSS"],
+      github: "https://github.com/dipanjan2907/MiniGames",
+      demo: "https://dipanjan2907.github.io/MiniGames/",
+    },
+    {
       title: "Notes App",
       description: "Modern, responsive notes.",
       tags: ["React", "Tailwind"],
       github: "https://github.com/dipanjan2907/Note_App",
       demo: "https://dipanjan2907.github.io/Note_App/",
-      status: "LIVE",
     },
     {
       title: "Locksmith",
@@ -24,7 +30,6 @@ const AllProjects = () => {
       tags: ["JS", "Crypto API"],
       github: "https://github.com/dipanjan2907/locksmith-password-generator",
       demo: "https://dipanjan2907.github.io/locksmith-password-generator/",
-      status: "LIVE",
     },
     {
       title: "Campus Link",
@@ -32,7 +37,6 @@ const AllProjects = () => {
       tags: ["Next.js", "Firebase"],
       github: "https://github.com/dipanjan2907/camp-link",
       demo: "https://dipanjan2907.github.io/camp-link/",
-      status: "BETA",
     },
     {
       title: "Xenvra",
@@ -40,7 +44,6 @@ const AllProjects = () => {
       tags: ["React", "TypeScript"],
       github: "https://github.com/dipanjan2907/resume-builder",
       demo: "https://dipanjan2907.github.io/resume-builder/",
-      status: "BETA",
     },
     {
       title: "DSA in C++",
@@ -48,7 +51,6 @@ const AllProjects = () => {
       tags: ["C++"],
       github: "https://github.com/dipanjan2907/DSA-Cpp",
       demo: "",
-      status: "BETA",
     },
     {
       title: "Python",
@@ -56,7 +58,6 @@ const AllProjects = () => {
       tags: ["Python"],
       github: "https://github.com/dipanjan2907/Python-School",
       demo: "",
-      status: "STABLE",
     },
     {
       title: "Java",
@@ -64,7 +65,6 @@ const AllProjects = () => {
       tags: ["Java"],
       github: "https://github.com/dipanjan2907/Java-School",
       demo: "",
-      status: "STABLE",
     },
     {
       title: "C",
@@ -72,7 +72,6 @@ const AllProjects = () => {
       tags: ["C"],
       github: "https://github.com/dipanjan2907/C",
       demo: "",
-      status: "STABLE",
     },
   ];
 
