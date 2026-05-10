@@ -11,8 +11,6 @@ const Projects = ({ limit = null }) => {
       tags: ["EJS", "Tailwind"],
       github: "https://github.com/dipanjan2907/Aapad-Net",
       demo: "",
-      status: "BETA",
-      color: "text-nebula-cyan",
     },
     {
       title: "Arcade Vault",
@@ -20,8 +18,6 @@ const Projects = ({ limit = null }) => {
       tags: ["ReactJS", "Tailwind CSS"],
       github: "https://github.com/dipanjan2907/MiniGames",
       demo: "https://dipanjan2907.github.io/MiniGames/",
-      status: "BETA",
-      color: "text-nebula-cyan",
     },
     {
       title: "Campus Link",
@@ -29,8 +25,6 @@ const Projects = ({ limit = null }) => {
       tags: ["Next.js", "Firebase"],
       github: "https://github.com/dipanjan2907/camp-link",
       demo: "https://dipanjan2907.github.io/camp-link/",
-      status: "BETA",
-      color: "text-nebula-pink",
     },
     {
       title: "Xenvra",
@@ -38,8 +32,6 @@ const Projects = ({ limit = null }) => {
       tags: ["React", "TypeScript"],
       github: "https://github.com/dipanjan2907/resume-builder",
       demo: "https://dipanjan2907.github.io/resume-builder/",
-      status: "BETA",
-      color: "text-nebula-pink",
     },
   ];
 
@@ -55,8 +47,12 @@ const Projects = ({ limit = null }) => {
     >
       <div className="flex justify-between items-end mb-10 pb-6 border-b border-white/10">
         <div>
-          <h2 className="text-sm font-inter text-nebula-pink uppercase tracking-widest mb-2">Portfolio</h2>
-          <h3 className="text-3xl font-outfit font-bold text-white">Featured Work</h3>
+          <h2 className="text-sm font-inter text-nebula-pink uppercase tracking-widest mb-2">
+            Portfolio
+          </h2>
+          <h3 className="text-3xl font-outfit font-bold text-white">
+            Featured Work
+          </h3>
         </div>
       </div>
 
