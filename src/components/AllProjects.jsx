@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Github, ExternalLink, Folder } from "lucide-react";
-import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const AllProjects = () => {
@@ -77,8 +76,6 @@ const AllProjects = () => {
 
   return (
     <div className="min-h-screen text-gray-300 font-inter selection:bg-nebula-pink selection:text-white overflow-x-hidden">
-      <Navbar />
-
       <main className="max-w-[1600px] mx-auto pb-20 pt-32 px-6 md:px-10">
         <div className="mb-16">
           <h1 className="text-4xl md:text-6xl font-black font-outfit text-white mb-4">
