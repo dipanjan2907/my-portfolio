@@ -15,7 +15,7 @@ const AllProjects = () => {
       description: "Collection of mini games",
       tags: ["ReactJS", "Tailwind CSS"],
       github: "https://github.com/dipanjan2907/MiniGames",
-      demo: "https://dipanjan2907.github.io/MiniGames/",
+      demo: "https://minigamesvault.vercel.app/",
     },
     {
       title: "Notes App",
