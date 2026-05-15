@@ -17,7 +17,7 @@ const Projects = ({ limit = null }) => {
       description: "Collection of mini games with retro aesthetics.",
       tags: ["ReactJS", "Tailwind CSS"],
       github: "https://github.com/dipanjan2907/MiniGames",
-      demo: "https://dipanjan2907.github.io/MiniGames/",
+      demo: "https://minigamesvault.vercel.app/",
     },
     {
       title: "Campus Link",
