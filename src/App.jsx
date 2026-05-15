@@ -1,5 +1,4 @@
 import React, { useEffect, Suspense, lazy } from "react";
-import { Analytics } from "@vercel/analytics/next";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
