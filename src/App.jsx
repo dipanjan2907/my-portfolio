@@ -1,5 +1,5 @@
 import React, { useEffect, Suspense, lazy } from "react";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -9,7 +9,6 @@ import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 import TechStackMarquee from "./components/TechStackMarquee";
 
-// Lazy load the AllProjects component
 const AllProjects = lazy(() => import("./components/AllProjects"));
 
 const Home = () => (
@@ -55,6 +54,7 @@ function App() {
           <Route path="/projects" element={<AllProjects />} />
         </Routes>
       </Suspense>
+      <Analytics />
     </>
   );
 }
