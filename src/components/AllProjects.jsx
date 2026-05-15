@@ -152,7 +152,6 @@ const AllProjects = () => {
           </Link>
         </div>
       </main>
-
       <Footer />
     </div>
   );
