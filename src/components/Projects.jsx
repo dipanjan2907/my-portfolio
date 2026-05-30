@@ -6,11 +6,10 @@ import { Link } from "react-router-dom";
 const Projects = ({ limit = null }) => {
   const allProjects = [
     {
-      title: "Aapad Net",
-      description: "Resilient Offline Disaster Response System",
-      tags: ["EJS", "Tailwind"],
-      github: "https://github.com/dipanjan2907/Aapad-Net",
-      demo: "",
+      title: "HarmonyX",
+      description: "A Full Stack music website.",
+      tags: ["MERN", "JavaScript"],
+      github: "https://github.com/dipanjan2907/HarmonyX",
     },
     {
       title: "Arcade Vault",
@@ -20,18 +19,18 @@ const Projects = ({ limit = null }) => {
       demo: "https://minigamesvault.vercel.app/",
     },
     {
+      title: "Aapad Net",
+      description: "Resilient Offline Disaster Response System",
+      tags: ["EJS", "Tailwind"],
+      github: "https://github.com/dipanjan2907/Aapad-Net",
+      demo: "",
+    },
+    {
       title: "Campus Link",
       description: "Real-time campus platform for students.",
       tags: ["Next.js", "Firebase"],
       github: "https://github.com/dipanjan2907/camp-link",
       demo: "https://dipanjan2907.github.io/camp-link/",
-    },
-    {
-      title: "Xenvra",
-      description: "Interactive modern resume builder.",
-      tags: ["React", "TypeScript"],
-      github: "https://github.com/dipanjan2907/resume-builder",
-      demo: "https://dipanjan2907.github.io/resume-builder/",
     },
   ];
 
@@ -102,7 +101,11 @@ const Projects = ({ limit = null }) => {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-[11px] font-inter font-medium text-gray-300 bg-white/5 px-2.5 py-1 rounded-full border border-white/10"
+                  className={`text-[11px] font-inter font-medium px-2.5 py-1 rounded-full border ${
+                    tag === "MERN"
+                      ? "text-white bg-nebula-orange/20 border-nebula-orange/40"
+                      : "text-gray-300 bg-white/5 border-white/10"
+                  }`}
                 >
                   {tag}
                 </span>

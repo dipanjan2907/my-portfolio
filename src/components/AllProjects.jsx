@@ -17,6 +17,12 @@ const AllProjects = () => {
       demo: "https://minigamesvault.vercel.app/",
     },
     {
+      title: "HarmonyX",
+      description: "A Full Stack music website.",
+      tags: ["MERN", "JavaScript"],
+      github: "https://github.com/dipanjan2907/HarmonyX",
+    },
+    {
       title: "Notes App",
       description: "Modern, responsive notes.",
       tags: ["React", "Tailwind"],
@@ -133,7 +139,11 @@ const AllProjects = () => {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-[11px] font-inter font-medium text-gray-300 bg-white/5 px-2.5 py-1 rounded-full border border-white/10"
+                    className={`text-[11px] font-inter font-medium px-2.5 py-1 rounded-full border ${
+                      tag === "MERN"
+                        ? "text-white bg-nebula-orange/30 border-nebula-orange/40"
+                        : "text-gray-300 bg-white/5 border-white/10"
+                    }`}
                   >
                     {tag}
                   </span>
