@@ -1,14 +1,20 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Github, ExternalLink, Folder } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Projects = ({ limit = null }) => {
   const allProjects = [
     {
+      title: "Mystery Message",
+      description: "AI-Powered Anonymous Messaging Platform",
+      tags: ["AI", "Redis", "Next.js", "TS", "MONGO"],
+      github: "https://github.com/dipanjan2907/mystery-message",
+      demo: "https://mysterymsgapp.vercel.app/",
+    },
+    {
       title: "HarmonyX",
       description: "A Full Stack music website.",
-      tags: ["MERN", "JavaScript"],
+      tags: ["MERN", "JS"],
       github: "https://github.com/dipanjan2907/HarmonyX",
     },
     {

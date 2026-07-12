@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Code, Globe, Zap, Compass } from "lucide-react";
 
 const About = () => {
@@ -12,12 +11,16 @@ const About = () => {
       className="glass-panel p-8 md:p-10 flex flex-col justify-center relative"
     >
       <div className="mb-6 pb-6 border-b border-white/10">
-        <h2 className="text-sm font-inter text-nebula-orange uppercase tracking-widest mb-2">Introduction</h2>
+        <h2 className="text-sm font-inter text-nebula-orange uppercase tracking-widest mb-2">
+          Introduction
+        </h2>
         <h3 className="text-3xl font-outfit font-bold text-white">About Me</h3>
       </div>
 
       <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-8 font-inter">
-        I am a passionate developer focusing on building elegant, performant, and scalable applications. I love bringing ideas to life in the browser and pushing the boundaries of what web experiences can be.
+        I am a passionate developer focusing on building elegant, performant,
+        and scalable applications. I love bringing ideas to life in the browser
+        and pushing the boundaries of what web experiences can be.
       </p>
 
       <div className="grid grid-cols-3 gap-4">

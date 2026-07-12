@@ -10,6 +10,13 @@ const AllProjects = () => {
 
   const allProjects = [
     {
+      title: "Mystery Message",
+      description: "AI-Powered Anonymous Messaging Platform",
+      tags: ["AI", "Redis", "Next.js", "TS", "MONGO"],
+      github: "https://github.com/dipanjan2907/mystery-message",
+      demo: "https://mysterymsgapp.vercel.app/",
+    },
+    {
       title: "Arcade Vault",
       description: "Collection of mini games",
       tags: ["ReactJS", "Tailwind CSS"],
