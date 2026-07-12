@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Github, ExternalLink, Folder } from "lucide-react";
 import Footer from "./Footer";

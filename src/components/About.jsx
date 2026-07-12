@@ -1,6 +1,6 @@
 import React from "react";
 import { Code, Globe, Zap, Compass } from "lucide-react";
-
+import { motion } from "framer-motion";
 const About = () => {
   return (
     <motion.div
