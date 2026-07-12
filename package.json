@@ -14,10 +14,16 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@react-spring/three": "^10.1.2",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
+    "@react-three/postprocessing": "^3.0.4",
     "@vercel/analytics": "^2.0.1",
     "create-vite-app": "^1.21.0",
     "framer-motion": "^12.23.24",
+    "gsap": "^3.15.0",
     "lucide-react": "^0.555.0",
+    "maath": "^0.10.8",
     "react": "^19.2.0",
     "react-country-flag": "^3.1.0",
     "react-dom": "^19.2.0",
