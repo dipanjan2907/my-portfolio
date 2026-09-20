@@ -6,35 +6,33 @@ import { Link } from "react-router-dom";
 const Projects = ({ limit = null }) => {
   const allProjects = [
     {
+      title: "Skill Bridge",
+      description: "Bridging the gap between your skills and opportunities.",
+      highlight: "SIH",
+      tags: ["ReactJS", "NodeJS", "MySQL"],
+      github: "https://github.com/dipanjan2907/mystery-message",
+      demo: "https://mysterymsgapp.vercel.app/",
+    },
+    {
       title: "Mystery Message",
       description: "AI-Powered Anonymous Messaging Platform",
+      highlight: "",
       tags: ["AI", "Redis", "Next.js", "TS", "MONGO"],
       github: "https://github.com/dipanjan2907/mystery-message",
       demo: "https://mysterymsgapp.vercel.app/",
     },
     {
-      title: "HarmonyX",
-      description: "A Full Stack music website.",
-      tags: ["MERN", "JS"],
-      github: "https://github.com/dipanjan2907/HarmonyX",
-    },
-    {
       title: "Arcade Vault",
       description: "Collection of mini games with retro aesthetics.",
+      highlight: "",
       tags: ["ReactJS", "Tailwind CSS"],
       github: "https://github.com/dipanjan2907/MiniGames",
       demo: "https://minigamesvault.vercel.app/",
     },
     {
-      title: "Aapad Net",
-      description: "Resilient Offline Disaster Response System",
-      tags: ["EJS", "Tailwind"],
-      github: "https://github.com/dipanjan2907/Aapad-Net",
-      demo: "",
-    },
-    {
       title: "Campus Link",
       description: "Real-time campus platform for students.",
+      highlight: "",
       tags: ["Next.js", "Firebase"],
       github: "https://github.com/dipanjan2907/camp-link",
       demo: "https://dipanjan2907.github.io/camp-link/",
@@ -63,63 +61,92 @@ const Projects = ({ limit = null }) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="group relative bg-white/[0.02] border border-white/5 hover:border-nebula-pink/50 p-6 transition-all duration-500 rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-neon"
-          >
-            {/* Subtle background glow on hover */}
-            <div className="absolute inset-0 bg-nebula-gradient opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none"></div>
+        {projects.map((project, index) => {
+          const isSIH = project.highlight === "SIH";
 
-            <div className="flex justify-between items-start mb-6 relative z-10">
-              <div className="w-12 h-12 rounded-lg bg-space-light border border-white/10 flex items-center justify-center text-nebula-orange group-hover:scale-110 transition-transform duration-300">
-                <Folder size={24} />
+          return (
+            <div
+              key={index}
+              className={`group relative bg-white/[0.02] border p-6 transition-all duration-500 rounded-xl overflow-hidden hover:-translate-y-1 hover:shadow-neon flex flex-col justify-between ${
+                isSIH
+                  ? "border-nebula-orange/60 shadow-[0_0_15px_rgba(249,115,22,0.15)] hover:border-nebula-orange"
+                  : "border-white/5 hover:border-nebula-pink/50"
+              }`}
+            >
+              {/* Highlight Ribbon / Badge for SIH */}
+              {isSIH && (
+                <div className="absolute top-0 right-0 z-20">
+                  <div className="bg-gradient-to-l from-nebula-orange to-amber-500 text-black font-inter font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-bl-lg shadow-lg flex items-center gap-1">
+                    {/* <Award size={12} className="stroke-[2.5]" /> */}
+                    <span>{project.highlight}</span>
+                  </div>
+                </div>
+              )}
+
+              {/* Subtle background glow on hover */}
+              <div
+                className={`absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none ${
+                  isSIH ? "bg-nebula-orange" : "bg-nebula-gradient"
+                }`}
+              ></div>
+
+              <div>
+                <div className="flex justify-between items-start mb-6 relative z-10">
+                  <div
+                    className={`w-12 h-12 rounded-lg border flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${
+                      isSIH
+                        ? "bg-nebula-orange/10 border-nebula-orange/30 text-nebula-orange"
+                        : "bg-space-light border-white/10 text-nebula-orange"
+                    }`}
+                  >
+                    <Folder size={24} />
+                  </div>
+
+                  <div className={`flex gap-3 ${isSIH ? "mr-12" : ""}`}>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-white transition-colors"
+                      >
+                        <Github size={20} />
+                      </a>
+                    )}
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-white transition-colors"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                <h4 className="text-xl font-bold font-outfit text-white group-hover:text-nebula-pink transition-colors mb-3 relative z-10">
+                  {project.title}
+                </h4>
+                <p className="text-gray-400 text-sm font-inter mb-6 line-clamp-2 leading-relaxed relative z-10">
+                  {project.description}
+                </p>
               </div>
-              <div className="flex gap-3">
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    className="text-gray-400 hover:text-white transition-colors"
+
+              <div className="flex flex-wrap gap-2 mt-auto relative z-10">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[11px] font-inter font-medium px-2.5 py-1 rounded-full border text-gray-300 bg-white/5 border-white/10"
                   >
-                    <Github size={20} />
-                  </a>
-                )}
-                {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    <ExternalLink size={20} />
-                  </a>
-                )}
+                    {tag}
+                  </span>
+                ))}
               </div>
             </div>
-
-            <h4 className="text-xl font-bold font-outfit text-white group-hover:text-nebula-pink transition-colors mb-3 relative z-10">
-              {project.title}
-            </h4>
-            <p className="text-gray-400 text-sm font-inter mb-6 line-clamp-2 leading-relaxed relative z-10">
-              {project.description}
-            </p>
-
-            <div className="flex flex-wrap gap-2 mt-auto relative z-10">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className={`text-[11px] font-inter font-medium px-2.5 py-1 rounded-full border ${
-                    tag === "MERN"
-                      ? "text-white bg-nebula-orange/20 border-nebula-orange/40"
-                      : "text-gray-300 bg-white/5 border-white/10"
-                  }`}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {limit && (
