@@ -10,8 +10,8 @@ const Projects = ({ limit = null }) => {
       description: "Bridging the gap between your skills and opportunities.",
       highlight: "SIH",
       tags: ["ReactJS", "NodeJS", "MySQL"],
-      github: "https://github.com/dipanjan2907/mystery-message",
-      demo: "https://mysterymsgapp.vercel.app/",
+      github: "https://github.com/dipanjan2907/Skill_Bridge_SIH",
+      demo: "https://skillbridgeportal.vercel.app/",
     },
     {
       title: "Mystery Message",
